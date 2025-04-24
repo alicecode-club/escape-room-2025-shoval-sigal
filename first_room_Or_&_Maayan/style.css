@@ -27,29 +27,27 @@ div{
     
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('castleLobby.jpg');
-    background-size: cover;
-    height: 100vh;
-}
-
-#game-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
 .window {
     position: absolute;
-    top: 25%;
-    width: 12%;
-    height: 45%;
+    width: 100px;
+    height: 150px;
     cursor: pointer;
     border: 2px solid transparent;
+    transition: 0.3s;
 }
 
-#window1 { left: 40%; }  /* חלון ימין */
-#window2 { left: 55%; }  /* חלון אמצע */
-#window3 { left: 70%; }  /* חלון שמאל-ימין */
+.window img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* מיקומים של החלונות */
+#window1 { top: 30%; left: 32%; }
+#window2 { top: 30%; left: 49%; }
+#window3 { top: 30%; left: 66%; }
+
+.window:hover {
+    border-color: gold;
+}
