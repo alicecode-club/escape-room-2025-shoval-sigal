@@ -19,10 +19,37 @@ div{
     padding-top: 10px;
 }
 
-a{
+.moveOn{
     border-radius:5%;
     color:black;
     font-family: fantasy;
     background-color: gray;
-    border: 10px;
+    
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('castleLobby.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+#game-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.window {
+    position: absolute;
+    top: 25%;
+    width: 12%;
+    height: 45%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#window1 { left: 40%; }  /* חלון ימין */
+#window2 { left: 55%; }  /* חלון אמצע */
+#window3 { left: 70%; }  /* חלון שמאל-ימין */
