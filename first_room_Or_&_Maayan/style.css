@@ -19,10 +19,51 @@ div{
     padding-top: 10px;
 }
 
-a{
+.moveOn{
     border-radius:5%;
     color:black;
     font-family: fantasy;
     background-color: gray;
-    border: 10px;
+    
+}
+
+.window {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.window img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* מיקומים של החלונות */
+#window1 { top: 30%; left: 32%; }
+#window2 { top: 30%; left: 49%; }
+#window3 { top: 30%; left: 66%; }
+
+.window:hover {
+    border-color: gold;
+}
+
+.invisible{
+    visibility:hidden;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.secret{
+    color:blue;
+    background-color: blueviolet;
 }
