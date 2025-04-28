@@ -18,3 +18,11 @@ div{
     margin-top:150px;
     padding-top: 10px;
 }
+
+a{
+    border-radius:5%;
+    color:black;
+    font-family: fantasy;
+    background-color: gray;
+    border: 10px;
+}
