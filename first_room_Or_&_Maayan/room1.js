@@ -3,14 +3,28 @@ function moveOn(){
 }
 
 function showPopup0() {
-    document.getElementById("popup").style.display = "block";
-    const board = document.getElementById('popup'); //הגדרת משתנה לדיב של הלוח משחק
+    document.getElementById("popup").style.display = "block";  
+}function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+}function showPopup1() {
+    document.getElementById("popup1").style.display = "block";
+}function hidePopup1() {
+    document.getElementById("popup1").style.display = "none";
+}function showPopup2() {
+    document.getElementById("popup2").style.display = "block";
+}function hidePopup2() {
+    document.getElementById("popup2").style.display = "none";
+}
 
-const positions = [ //מיקומים של החלקים
+function StartGame (){
+    const board = document.getElementById('board'); //הגדרת משתנה לדיב של הלוח משחק
+    board.innerHTML = ""; // מנקה תוכן קודם
+
+    const positions = [ //מיקומים של החלקים
     [0, 0], [100, 0], [200, 0],
     [0, 100], [100, 100], [200, 100],
     [0, 200], [100, 200], [200, 200]
-  ].sort(() => Math.random() - 0.5); //עירובוב של המקומות של החלקים
+].sort(() => Math.random() - 0.5); //עירובוב של המקומות של החלקים
 
   let selected = null;//משתנה של החלק שנבחר
 
@@ -33,29 +47,8 @@ const positions = [ //מיקומים של החלקים
             selected = null; // מאפס את משתנה הבחירה
 
         }
-
-    });
-    board.appendChild(div); //מוסיף את החלק ללוח
+}
+  );
+  board.appendChild(div); //מוסיף את החלק ללוח
 }
 }
-
-function hidePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
-function showPopup1() {
-    document.getElementById("popup1").style.display = "block";
-}
-
-function hidePopup1() {
-    document.getElementById("popup1").style.display = "none";
-}
-
-function showPopup2() {
-    document.getElementById("popup2").style.display = "block";
-}
-
-function hidePopup2() {
-    document.getElementById("popup2").style.display = "none";
-}
-
