@@ -52,3 +52,7 @@ function StartGame (){
   board.appendChild(div); //מוסיף את החלק ללוח
 }
 }
+
+function move(){
+    window.location.href = "../TESTGAME.html";
+}
