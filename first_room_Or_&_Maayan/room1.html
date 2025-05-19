@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="room1.js"></script>
     <title>Escape Room</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="room1.js"></script>
 </head>
 <body>
     <div id="click-zone0" onclick="showPopup0()"></div>
     <div id="popup">
         <button onclick="hidePopup()">סגור</button>
-         <button onclick="move()">start game</button>
-    </div>
+        <button onclick="StartGame()">Start Game</button>
+        <div id="board"></div> <!-- לוח הפאזל -->
+    </div>    
+
     <div id="click-zone1" onclick="showPopup1()"></div>
     <div id="popup1">
         <h2>ברוך הבא לנסיכה! 👑</h2>
         <p>זהו הפופ־אפ של החלון השני.</p>
         <button onclick="hidePopup1()">סגור</button>
     </div>
+
     <div id="click-zone2" onclick="showPopup2()"></div>
     <div id="popup2">
-        <h2>ברוך הבא לורד! 👑</h2>
+        <h2>ברוך הבא לורד! 🌹</h2>
         <p>זהו הפופ־אפ של החלון השלישי.</p>
         <button onclick="hidePopup2()">סגור</button>
     </div>
