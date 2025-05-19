@@ -5,38 +5,39 @@ function moveOn(){
 function showPopup0() {
     document.getElementById("popup").style.display = "block";
     const board = document.getElementById('popup'); //הגדרת משתנה לדיב של הלוח משחק
-    const positions = [
-        [0, 0], [100, 0], [200, 0],
-        [0, 100], [100, 100], [200, 100],
-        [0, 200], [100, 200], [200, 200]
-    ].sort(() => Math.random() - 0.5);
 
-    let selected = null;
+const positions = [ //מיקומים של החלקים
+    [0, 0], [100, 0], [200, 0],
+    [0, 100], [100, 100], [200, 100],
+    [0, 200], [100, 200], [200, 200]
+  ].sort(() => Math.random() - 0.5); //עירובוב של המקומות של החלקים
 
-    for (let i = 0; i < positions.length; i++) {
-        const pos = positions[i];
-        const div = document.createElement('div');
-        div.className = 'piece';
-        div.style.backgroundPosition = `-${pos[0]}px -${pos[1]}px`;
-        div.dataset.bg = `${pos[0]},${pos[1]}`;
+  let selected = null;//משתנה של החלק שנבחר
 
-        div.addEventListener('click', () => {
-            if (!selected) {
-                selected = div;
-                div.style.border = '2px solid red';
-            } else {
-                const temp = div.style.backgroundPosition;
-                div.style.backgroundPosition = selected.style.backgroundPosition;
-                selected.style.backgroundPosition = temp;
-                selected.style.border = '1px solid #ccc';
-                selected = null;
-            }
-        });
+  for (let i = 0; i < positions.length; i++) { //לולאה שרצה על כל המקומות במערך
+    const pos = positions[i]; //הגדרת משתנה למיקום הנוחכי בהרצה 
+    const div = document.createElement('div'); //יצירת דיב לחלק מן הפאזל
+    div.className = 'piece';
+    div.style.backgroundPosition = `-${pos[0]}px -${pos[1]}px`; //מציג את החלק בתמונה
+    div.dataset.bg = `${pos[0]},${pos[1]}`; //שומר את המיקום של החלק
+    
+    div.addEventListener('click', () => {//פונקצייה שרצה שנלחץ החלק 
+        if (!selected) {//בדיקה אם כבר נבחר חלק
+            selected = div; //מגידרים אותו כחלק שנבחר
+            div.style.border = '2px solid red';
+        } else { //אם נבחר כבר חלק
+            const temp = div.style.backgroundPosition;
+            div.style.backgroundPosition = selected.style.backgroundPosition; //החלפה ש הרקעים של החלקים
+            selected.style.backgroundPosition = temp;
+            selected.style.border = '1px solid #ccc';
+            selected = null; // מאפס את משתנה הבחירה
 
-        board.appendChild(div);
-    }
+        }
+
+    });
+    board.appendChild(div); //מוסיף את החלק ללוח
 }
-
+}
 
 function hidePopup() {
     document.getElementById("popup").style.display = "none";
