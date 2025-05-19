@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-image: url(../media/background.jpg);
+    background-image: url(../media/background.png);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
 }
 
 .text h1 {
-    color: #b5838d;
+    color: black;
     font-size: 16px;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 button {
-    background-color: #a3c9a8;
+    background-color: maroon;
     color: white;
     border: none;
     padding: 12px 24px;
