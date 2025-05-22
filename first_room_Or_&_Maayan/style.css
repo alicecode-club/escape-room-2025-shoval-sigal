@@ -96,8 +96,9 @@ div {
     padding: 0;
     gap: 0; /* ביטול רווחים */
     box-sizing: content-box;
-    top: 0%;
-    left: 38%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
 }
 
 .piece {
