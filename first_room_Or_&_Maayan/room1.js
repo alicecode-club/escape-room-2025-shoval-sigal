@@ -153,7 +153,7 @@ function checkWin1() {
     num = 2;
 }
 
-function StartGame1() {
+function StartGame2() {
     if(num == 2){
         const board = document.getElementById('board2'); // תיקון! אל תשתמש ב-popup עצמו
         board.innerHTML = ""; // מנקה תוכן קודם
@@ -194,7 +194,7 @@ function StartGame1() {
                     selected.style.border = 'none';
                     selected = null;
 
-                    checkWin1(); // בודק האם הצליחו
+                    checkWin2(); // בודק האם הצליחו
                 }
             });
 
@@ -205,15 +205,15 @@ function StartGame1() {
         }
     }
 
-function checkWin1() {
+function checkWin2() {
     const pieces = document.querySelectorAll('.piece2');
-    for (let piece1 of pieces) {
-        if (piece1.dataset.current !== piece1.dataset.correct) {
+    for (let piece2 of pieces) {
+        if (piece2.dataset.current !== piece2.dataset.correct) {
             return; // עדיין לא סיים
         }
     }
 
     // הצלחה!
-    setTimeout(() => alert("YOU GOT A KEY!!!🔑"), 100);
+    setTimeout(() => alert("YOU GOT A ROSE!!!🌹"), 100);
     num = 3;
 }

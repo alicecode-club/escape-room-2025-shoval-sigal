@@ -60,7 +60,7 @@ div {
     width: 150px;
     height: 300px;
     cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: transparent;
 }
 
 #popup {
@@ -139,6 +139,17 @@ div {
     padding: 0;
 }
 
+.piece2 {
+    width: 100px;
+    height: 100px;
+    border: 0; /* או 1px אם את רוצה מסגרת */
+    background-image: url('../img/window3.jpg');
+    background-size: 300px 300px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 #click-zone1 {
     position: absolute;
     top: 0%;
@@ -146,7 +157,7 @@ div {
     width: 300px;
     height: 350px;
     cursor: pointer;
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: transparent;
 }
 
 #popup1{
@@ -168,7 +179,7 @@ div {
     width: 150px;
     height: 300px;
     cursor: pointer;
-    background-color: rgba(0, 0, 255, 0.2);
+    background-color: transparent;
 }
 
 #popup2{
