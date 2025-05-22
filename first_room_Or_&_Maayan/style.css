@@ -108,7 +108,7 @@ div {
     background-color: rgba(0, 255, 0, 0.2);
 }
 
-#popup1, #popup2 {
+#popup1{
     display: none;
     position: fixed;
     top: 5%;
@@ -128,4 +128,16 @@ div {
     height: 300px;
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.2);
+}
+
+#popup2{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 55%;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 2px solid #000;
+    background-color: white;
 }
