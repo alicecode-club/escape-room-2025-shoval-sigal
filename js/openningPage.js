@@ -1,4 +1,4 @@
 function startGame() {
-    window.location.href = "../escaperoomend.html";
+    window.location.href = "./html/mainPage.html";
 }
     
