@@ -1,3 +1,77 @@
 body{
     background-image: url(../media/background1.png);
 }
+
+/*כתרים*/
+#crown-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(249, 249, 249, 0.251);
+  }
+  
+  .crowns {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    transition: box-shadow 1s ease;
+  }
+
+  .crowns:hover{
+    box-shadow:  0 10px 25px white;
+  }
+
+/*החידות שמופיעות*/
+#picture-question, #rose-question, #ice-question, #necklace-question, #castle-question, #earrings-question {
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;;
+    z-index: 999;
+    text-align: center;
+  }
+  
+  #picture-question.buttons, #rose-question.buttons, #ice-question.buttons, #necklace-question.buttons, #castle-question.buttons, #earrings-question.buttons  {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #picture-question button, #rose-question button, #ice-question button, #necklace-question button, #castle-question button, #earrings-question button{
+    margin-top:5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #picture-question button:hover, #rose-question button:hover, #ice-question button:hover, #necklace-question button:hover, #castle-question button:hover, #earrings-question button:hover{
+    background-color: #8bb48e;
+  }
+  
+  #picture-question input, #rose-question input, #ice-question input, #necklace-question input, #castle-question input, #earrings-question input{
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    direction: ltr;  
+  }
