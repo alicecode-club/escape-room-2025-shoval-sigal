@@ -86,6 +86,7 @@ div {
     gap: 0; /* ביטול רווחים */
     box-sizing: content-box;
 }
+
 #board1 {
     width: 300px;
     height: 300px;
@@ -98,6 +99,21 @@ div {
     box-sizing: content-box;
     position: absolute;
     top: 15%;
+    left: 2%;
+}
+
+#board2 {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 0;
+    gap: 0; /* ביטול רווחים */
+    box-sizing: content-box;
+    position: absolute;
+    top: 10%;
     left: 2%;
 }
 
@@ -161,7 +177,7 @@ div {
     top: 5%;
     left: 55%;
     width: 300px;
-    height: 300px;
+    height: 340px;
     padding: 10px;
     border: 2px solid #000;
     background-color: white;
