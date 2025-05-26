@@ -56,6 +56,31 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('earrings-question').style.display = 'block';
   }
 
+  //הקוד שאחראי לבדוק את התשובות לשאלותם
+  function picture_check(){
+    document.getElementById('picture-question').style.display = 'none';
+  }
+
+  function rose_check(){
+    document.getElementById('rose-question').style.display = 'none';
+  }
+
+  function ice_check(){
+    document.getElementById('ice-question').style.display = 'none';
+  }
+
+  function necklace_check(){
+    document.getElementById('necklace-question').style.display = 'none';
+  }
+
+  function castle_check(){
+    document.getElementById('castle-question').style.display = 'none';
+  }
+
+  function earrings_check(){
+    document.getElementById('earrings-question').style.display = 'none';
+  }
+
   
 
 
