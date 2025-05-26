@@ -20,6 +20,7 @@ body{
     width: 75px;
     height: 75px;
     transition: box-shadow 1s ease;
+    box-shadow:0px;
   }
 
   .crowns:hover{
