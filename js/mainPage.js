@@ -58,6 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //הקוד שאחראי לבדוק את התשובות לשאלותם
   function picture_check(){
+    const picture_checking = document.getElementById('picture_answer').value
     document.getElementById('picture-question').style.display = 'none';
   }
 
