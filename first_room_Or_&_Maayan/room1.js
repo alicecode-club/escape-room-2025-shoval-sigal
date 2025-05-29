@@ -1,4 +1,5 @@
 let num = 0;
+let win = false;
 function moveOn() {
     window.location.href = "../room1.html";
 }
@@ -216,4 +217,5 @@ function checkWin2() {
     // הצלחה!
     setTimeout(() => alert("YOU GOT A ROSE!!!🌹"), 100);
     num = 3;
+    win = true;
 }
