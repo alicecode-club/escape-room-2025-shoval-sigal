@@ -63,6 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('picture-question').style.display = 'none';
       document.getElementById('crown1').style.boxShadow = "0 10px 25px white";
+      document.getElementById('picture_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
@@ -75,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('rose-question').style.display = 'none';
       document.getElementById('crown2').style.boxShadow = "0 10px 25px white";
+      document.getElementById('rose_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
@@ -87,6 +89,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('ice-question').style.display = 'none';
       document.getElementById('crown3').style.boxShadow = "0 10px 25px white";
+      document.getElementById('ice_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
@@ -99,6 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('necklace-question').style.display = 'none';
       document.getElementById('crown4').style.boxShadow = "0 10px 25px white";
+      document.getElementById('necklace_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
@@ -111,6 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('castle-question').style.display = 'none';
       document.getElementById('crown5').style.boxShadow = "0 10px 25px white";
+      document.getElementById('castle_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
@@ -123,13 +128,28 @@ window.addEventListener('DOMContentLoaded', () => {
       alert("Correct!")
       document.getElementById('earrings-question').style.display = 'none';
       document.getElementById('crown6').style.boxShadow = "0 10px 25px white";
+      document.getElementById('earrings_img').style.display = 'block';
     }
     else{
       alert ("False, try again!")
     }
   }
 
-  
+function final(){
+  document.getElementById('final-question').style.display = 'block';
+
+}
+
+  function final_answer_check(){
+    const final_checking = document.getElementById('final-answer').value
+    if (final_checking == "Prince" || final_checking == "prince" || final_checking == "prince"){
+      alert("WELL DONE, You found who the crown belongs to! 👑")
+      document.getElementById('final-question').style.display = 'none';
+    }
+    else{
+      alert ("False, try again!")
+    }
+  }
 
 
 

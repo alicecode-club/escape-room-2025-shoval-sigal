@@ -57,3 +57,20 @@
 
 </body>
 </html>
+
+<div id="picture-container">
+    <img id="picture_img" class="pictures" src="../media/picture.png" width="75px" style="display:none">
+    <img id="rose_img" class="pictures" src="../media/rose.png" width="75px" style="display:none">
+    <img id="ice_img" class="pictures" src="../media/ice.png" width="75px" style="display:none">
+    <img id="necklace_img" class="pictures" src="../media/necklace.png" width="75px" style="display:none">
+    <img id="castle_img" class="pictures" src="../media/castle.png" width="75px" style="display:none">
+    <img id="earrings_img" class="pictures" src="../media/earrings.png" width="75px" style="display:none">
+ </div>
+
+ <button onclick="final()" id="final_question">who the crown belongs to?</button>
+
+ <div id="final-question" style="display:none">
+    <label>The Crown belongs to the...</label>
+    <input type="text" id="final-answer" placeholder="Your answer...">
+    <button onclick="final_answer_check()">check your answer</button>
+</div>
