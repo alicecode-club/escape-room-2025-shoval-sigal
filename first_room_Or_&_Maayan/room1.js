@@ -1,7 +1,12 @@
 let num = 0;
 let win = false;
 function moveOn() {
-    window.location.href = "../room1.html";
+    window.location.href = "./room1.html";
+}
+
+function moveOn2() {
+    window.location.replace("./room2.html");
+    console.log("hello");
 }
 
 function showPopup0() {
@@ -217,5 +222,10 @@ function checkWin2() {
     // הצלחה!
     setTimeout(() => alert("YOU GOT A ROSE!!!🌹"), 100);
     num = 3;
-    win = true;
+    showButton();
+}
+
+function showButton(){
+    if(num==3)
+        document.getElementById("button1").style.visibility = "visible";
 }

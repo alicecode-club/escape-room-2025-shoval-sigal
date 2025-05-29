@@ -193,3 +193,7 @@ div {
     border: 2px solid #000;
     background-color: white;
 }
+
+#button1{
+    visibility: hidden;
+}
