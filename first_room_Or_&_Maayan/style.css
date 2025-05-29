@@ -196,4 +196,11 @@ div {
 
 #button1{
     visibility: hidden;
+    position: fixed;
+    top: 80%;
+    left: 41.5%;
+    border-radius: 29%;
+    color: black;
+    font-family: fantasy;
+    background-color: gray;
 }
