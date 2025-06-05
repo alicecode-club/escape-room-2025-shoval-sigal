@@ -143,8 +143,8 @@ function final(){
   function final_answer_check(){
     const final_checking = document.getElementById('final-answer').value
     if (final_checking == "Prince" || final_checking == "prince" || final_checking == "prince"){
-      alert("WELL DONE, You found who the crown belongs to! 👑")
       document.getElementById('final-question').style.display = 'none';
+      window.location.href = "../html/endPage.html";
     }
     else{
       alert ("False, try again!")
