@@ -1,8 +1,17 @@
 
 #background{
-  background-image: url('background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   width:1250px;
   height:600px;
+    z-index: 1;
+  }
+ #key-item{
+  background-color:red;
+  height: 30px;
+  width: 30px;
+  margin-left: 1000px; 
+  margin-bottom: 200px;
+  bottom: 2000px;
+   z-index: 2; 
   }
