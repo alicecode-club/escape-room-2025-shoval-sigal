@@ -33,6 +33,7 @@ function hidePopup3() {
     document.getElementById("popup3").style.display = "none";
 }
 
-if (item1==true&&item2==true&&item3==true){
+if (item1==true && item2==true && item3==true){
+    alert("Congrargulation! You Finished The First Room!!!")
     //ניווט לחדר של נועה ואופיר
 }
