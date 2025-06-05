@@ -14,7 +14,7 @@ function showPopup1() {
 
 function hidePopup1() {
     document.getElementById("popup1").style.display = "none";
-    checkFounding()
+    setTimeout(() => checkFounding(), 100);
 }
 
 function showPopup2() {
@@ -25,7 +25,7 @@ function showPopup2() {
 
 function hidePopup2() {
     document.getElementById("popup2").style.display = "none";
-    checkFounding()
+    setTimeout(() => checkFounding(), 100);
 }
 
 function showPopup3() {
@@ -36,7 +36,7 @@ function showPopup3() {
 
 function hidePopup3() {
     document.getElementById("popup3").style.display = "none";
-    checkFounding()
+    setTimeout(() => checkFounding(), 100);
 }
 
 /*function moveOn3() {
