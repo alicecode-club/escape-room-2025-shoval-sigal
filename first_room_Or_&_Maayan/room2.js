@@ -6,10 +6,9 @@ function hidePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-
 function showPopup1() {
     document.getElementById("popup1").style.display = "block";
-    item1 =true;
+    item1 =true;   
 }
 
 function hidePopup1() {
@@ -32,4 +31,8 @@ function showPopup3() {
 
 function hidePopup3() {
     document.getElementById("popup3").style.display = "none";
+}
+
+if (item1==true&&item2==true&&item3==true){
+    //ניווט לחדר של נועה ואופיר
 }
