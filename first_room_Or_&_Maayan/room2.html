@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="room2.css">
+    <script defer src="room2.js"></script>
+</head>
+<body>  
+    <div id="click-zone1" onclick="showPopup1()"></div>
+    <div id="popup1">
+        <img src = "../img/cogsworth.jpg" style = "height: 300px; width: 300px;"/>
+        <br>You found Cogsworth!<br><br>
+        <button onclick="hidePopup1()">close</button>
+    </div>
+
+    <div id="click-zone2" onclick="showPopup2()"></div>
+    <div id="popup2">
+        <img src = "../img/candle.jpg" style = "height: 300px; width: 300px;"/>
+        <br>You found Lumiere!<br><br>
+        <button onclick="hidePopup2()">close</button>
+    </div>
+
+    <div id="click-zone3" onclick="showPopup3()"></div>    
+    <div id="popup3">
+        <img src = "../img/Mrs. Potts.jpg" style = "height: 300px; width: 300px;"/>
+        <br>You found Mrs. Potts!<br><br>
+        <button onclick="hidePopup3()">סגור</button>
+    </div> 
+    <div id="popup">
+        Belle is a smart and adventurous young woman who lives in a small village with her father, Maurice, an inventor. 
+       <br>When Maurice gets lost in the forest on his way to a fair, he accidentally discovers a mysterious castle and is captured by the Beast who lives there.
+        <br>Hearing that her father is missing, Belle goes searching for him and finds the castle. 
+        <br>To save her father, she bravely offers to take his place as the Beast’s prisoner.
+        <br>The Beast agrees, and Belle stays in the castle, beginning her journey in this strange and magical place.
+        <br><br> WHAT DO YOU NEED TO DO?
+        <br>To help belle get around the castle 
+        <br>You need to find 3 item who will help you to get to the next room
+        <br> Good Luck!
+        <br><button onclick="hidePopup()">done reading</button>
+    </div> 
+</body>
+</html>
