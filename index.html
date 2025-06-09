@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="javascript.js"></script>
+
+</head>
+<body>
+      <img
+      src="./mdia/Bel.png"
+      alt="My image file description" 
+      id="background"/>
+
+        <div class="item" id="key-item" onclick="pick_keys()">
+          <img
+      src="./mdia/BelKey2-removebg-preview.png"
+      alt="My image file description" 
+      id="key-img"/>
+
+</div>
+
+<div class="item" id="drawer-item" onclick="open_drawer()">
+  מגירה נעולה
+</div>
+
+
+<div class="item" id="window-element" onclick="click_window()">
+  חלון
+</div>
+<div id="popup_drawer_content" class="popup">
+  <h2>המגירה נפתחה!</h2>
+  <p>גילית חבל בתוך המגירה!</p>
+  <button onclick="close_popup('popup_drawer_content')">סגור</button>
+</div>
+
+</body>
+</html>
