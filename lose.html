@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/end.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף סיום</title>
+</head>
+<body>
+    <video id = "myVideo" width="1285" height="600" controls>
+        <source src="./videoplayback.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.getElementById('myVideo');
+      
+        document.body.addEventListener('click', () => {
+          video.muted = false;
+          video.play();
+        }, { once: true }); 
+      </script>
+</body>
+</html>
