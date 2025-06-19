@@ -61,6 +61,11 @@ p {
     color: green;
 }
 
+/* הוספה: סגנון עבור הודעת שגיאה */
+#message.error {
+    color: red;
+}
+
 #resetButton {
     padding: 10px 20px;
     background-color: #007bff;
@@ -75,4 +80,3 @@ p {
 #resetButton:hover {
     background-color: #0056b3;
 }
-

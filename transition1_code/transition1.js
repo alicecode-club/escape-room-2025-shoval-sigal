@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         enteredPattern = [];
         shapes.forEach(shape => {
             shape.classList.remove('selected');
-            shape.removeEventListener('click', handleShapeClick); // הסר מאזין זמני כדי למנוע כפילויות
-            shape.addEventListener('click', handleShapeClick); // הוסף מאזין מחדש
         });
         messageDisplay.textContent = '';
         messageDisplay.classList.remove('success', 'error');
@@ -42,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // פונקציה לטיפול בלחיצה על צורה
     function handleShapeClick(event) {
-        const clickedShape = event.target;
+        // השתמש ב-closest כדי לוודא שאנחנו תמיד מקבלים את אלמנט ה-.shape, גם אם הקליק היה על התמונה הפנימית
+        const clickedShape = event.target.closest('.shape');
+        if (!clickedShape) return; // אם הקליק לא היה בתוך .shape, צא.
+
         const shapeType = clickedShape.dataset.shape;
 
         if (!clickedShape.classList.contains('selected')) {
@@ -62,11 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // פונקציה להפעלת לחיצות על צורות
     function enableShapes() {
         shapes.forEach(shape => {
+            // ודא שלא מוסיפים listener אם כבר קיים
+            shape.removeEventListener('click', handleShapeClick); // הסר ודא שאין כפילות
             shape.addEventListener('click', handleShapeClick);
         });
     }
 
-    // איפוס המנעול וקישור אירועים בהתחלה
+    // הוסף את ה-event listeners פעם אחת בטעינת הדף
+    enableShapes();
+    // אתחל את מצב המנעול
     resetLock();
+    // קשר את כפתור האיפוס לפונקציית האיפוס
     resetButton.addEventListener('click', resetLock);
 });
