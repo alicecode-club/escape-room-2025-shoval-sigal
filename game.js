@@ -151,7 +151,6 @@ function update() {
         // משתמש ב-player.radius המעודכן וב-wolfHalfWidth החדש.
         if (distance < player.radius + wolfHalfWidth) {
             nextpage()
-            location.reload();
         }
     });
 
