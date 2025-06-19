@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.lock-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.shapes-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.shape {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #555;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.shape:hover {
+    transform: scale(1.05);
+}
+
+
+.shape.selected {
+    border: 3px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+#message {
+    font-weight: bold;
+    color: red;
+    margin-top: 15px;
+    min-height: 20px; /* כדי לשמור על מקום להודעה */
+}
+
+#message.success {
+    color: green;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#resetButton:hover {
+    background-color: #0056b3;
+}
+
