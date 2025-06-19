@@ -9,7 +9,7 @@ const followerImage = new Image();
 // הגדרת נתיבי התמונות (ודאי שהם נכונים ושהתמונות קיימות בתיקייה 'mdia')
 playerImage.src = './mdia/player.png'; // שנה את הנתיב לשל השחקן שלך
 wolfImage.src = './mdia/wolf.png';     // שנה את הנתיב לשל הזאב שלך
-followerImage.src = './mdia/follower.jpeg'; // שנה את הנתיב לשל העוקב שלך
+followerImage.src ="./mdia/follower.jpe"; // שנה את הנתיב לשל העוקב שלך
 
 // פונקציה לטעינת כל התמונות ורק לאחר מכן להתחיל את המשחק
 let imagesLoaded = 0;

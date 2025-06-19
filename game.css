@@ -2,25 +2,19 @@ body {
     margin: 0; /* מונע שוליים ברירת מחדל של הדפדפן */
     overflow: hidden; /* מונע גלילה אם התמונה גדולה מהמסך */
     position: relative; /* מאפשר מיקום אבסולוטי לילדים */
-    background-image: url("./mdia/123456.jpg");
+    background-image: url("./mdia/123456.jpg"); /* הרקע מוגדר ישירות על ה-body */
+    background-size: cover; /* מומלץ: מכסה את כל שטח ה-body */
+    background-position: center; /* ממרכז את התמונה */
+    background-repeat: no-repeat; /* מונע חזרתיות */
 }
 
-#background {
-    position: absolute; /* ממקם את הרקע באופן אבסולוטי */
-    top: 0;
-    left: 0;
-    width: 1900px; /* וודא שהמימדים תואמים את הקנבס */
-    height: 900px;
-    z-index: 0; /* הרקע יהיה מתחת לקנבס */
-    background-position: center;
-    background-repeat: no-repeat;
-}
+/* כללי ה-CSS עבור #background הוסרו, מכיוון שאין אלמנט כזה ב-HTML */
 
 #gameCanvas {
-    position: absolute; /* ממקם את הקנבס באופן אבסולוטי מעל הרקע */
+    position: absolute;
     top: 0;
     left: 0;
     color:brown;
-    z-index: 2; /* הקנבס יהיה מעל הרקע */
-    background-color: transparent; /* לוודא שהקנבס שקוף ורואים את הרקע */
+    z-index: 2;
+    background-color: transparent; /* החזר לזה */
 }
