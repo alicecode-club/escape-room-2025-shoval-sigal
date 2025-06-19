@@ -7,9 +7,9 @@ const wolfImage = new Image();
 const followerImage = new Image();
 
 // הגדרת נתיבי התמונות (ודאי שהם נכונים ושהתמונות קיימות בתיקייה 'mdia')
-playerImage.src = './mdia/player.png'; // שנה את הנתיב לשל השחקן שלך
-wolfImage.src = './mdia/wolf.png';     // שנה את הנתיב לשל הזאב שלך
-followerImage.src ="./mdia/follower.jpe"; // שנה את הנתיב לשל העוקב שלך
+playerImage.src = './mdia/bell.png'; // שנה את הנתיב לשל השחקן שלך
+wolfImage.src = './mdia/tree.png';     // שנה את הנתיב לשל הזאב שלך
+followerImage.src ="./mdia/wolf.png"; // שנה את הנתיב לשל העוקב שלך
 
 // פונקציה לטעינת כל התמונות ורק לאחר מכן להתחיל את המשחק
 let imagesLoaded = 0;
@@ -39,7 +39,8 @@ followerImage.onerror = () => console.error("Failed to load follower image: " + 
 const player = {
     x: 50,
     y: canvas.height / 2,
-    radius: 15, // הרדיוס עדיין שימושי לבדיקת התנגשות ומיקום מרכז התמונה
+    // ** הגדלנו את הרדיוס של השחקן מ-15 ל-30. זה ישפיע על גודל התמונה ובדיקת ההתנגשות. **
+    radius: 30,
     speed: 5,
 };
 
@@ -56,30 +57,28 @@ const followerDistance = 30; // המרחק הרצוי בין הנקודות
 // קלט מקלדת
 const keys = {};
 
-// --- פונקציות ציור חדשות המשתמשות בתמונות ---
-
 function drawPlayer() {
     // מצייר את התמונה ממורכזת סביב נקודת השחקן (x, y)
-    // רוחב וגובה התמונה יהיו פי 2 מהרדיוס
-    ctx.drawImage(playerImage, player.x - player.radius, player.y - player.radius, player.radius * 2, player.radius * 2);
+    // רוחב וגובה התמונה יהיו פי 2 מהרדיוס. כעת הגודל הוא 60x60 (30*2).
+    ctx.drawImage(playerImage, player.x - player.radius, player.y - player.radius, player.radius * 4, player.radius * 4);
 }
 
 function drawWolves() {
     wolves.forEach(wolf => {
-        // הזאב היה בגודל 20x20
-        ctx.drawImage(wolfImage, wolf.x, wolf.y, 20, 20);
+        // ** הגדלנו את גודל תמונת הזאב מ-20x20 ל-40x40. **
+        ctx.drawImage(wolfImage, wolf.x, wolf.y, 80, 80);
     });
 }
 
 function drawFollowers() {
     followers.forEach(follower => {
-        // העוקב היה ברדיוס 10, כלומר 20x20
-        // מצייר את התמונה ממורכזת סביב נקודת העוקב
-        ctx.drawImage(followerImage, follower.x - 10, follower.y - 10, 20, 20);
+        const followerSize = 80; // ** הגדרנו גודל חדש לעוקב (לדוגמה: 60x60). **
+        const halfFollowerSize = followerSize / 2; // חצי מהגודל כדי למרכז את התמונה.
+        // מצייר את התמונה ממורכזת סביב נקודת העוקב.
+        ctx.drawImage(followerImage, follower.x - halfFollowerSize, follower.y - halfFollowerSize, followerSize, followerSize);
     });
 }
 
-// --- לוגיקת משחק ---
 function update() {
     // תנועת שחקן
     if (keys.ArrowUp && player.y - player.radius > 0) player.y -= player.speed;
@@ -90,9 +89,10 @@ function update() {
     // יצירת זאבים
     wolfSpawnTimer++;
     if (wolfSpawnTimer >= wolfSpawnInterval) {
+        // התאמנו את טווח יצירת הזאבים לגובה החדש של הזאב (40).
         wolves.push({
             x: canvas.width,
-            y: Math.random() * (canvas.height - 20),
+            y: Math.random() * (canvas.height - 40),
             speed: Math.random() * 3 + 2,
         });
         wolfSpawnTimer = 0;
@@ -101,8 +101,8 @@ function update() {
     // תנועת זאבים
     wolves.forEach((wolf, index) => {
         wolf.x -= wolf.speed;
-        // הסר זאבים שיצאו מהמסך
-        if (wolf.x + 20 < 0) { // 20 הוא רוחב תמונת הזאב
+        // הסר זאבים שיצאו מהמסך - ** עדכנו לרוחב החדש של הזאב (40). **
+        if (wolf.x + 40 < 0) {
             wolves.splice(index, 1);
         }
     });
@@ -134,19 +134,23 @@ function update() {
     // בדיקת התנגשות עם זאבים
     wolves.forEach(wolf => {
         // השתמש במימדי התמונה לבדיקת התנגשות
-        const playerHalfWidth = player.radius;
-        const playerHalfHeight = player.radius; // בהנחה שהתמונה עגולה או מרובעת עם אותו רדיוס
-        const wolfHalfWidth = 10; // חצי מרוחב תמונת הזאב (20/2)
-        const wolfHalfHeight = 10; // חצי מגובה תמונת הזאב (20/2)
+        const playerHalfWidth = player.radius; // חצי רוחב/גובה של השחקן (כעת 30).
+        const playerHalfHeight = player.radius;
+
+        const wolfWidth = 40; // ** רוחב הזאב החדש. **
+        const wolfHeight = 40; // ** גובה הזאב החדש. **
+        const wolfHalfWidth = wolfWidth / 2; // ** חצי רוחב הזאב החדש (20). **
+        const wolfHalfHeight = wolfHeight / 2; // ** חצי גובה הזאב החדש (20). **
 
         // חישוב המרחק בין מרכזי האובייקטים
         const dx = (player.x) - (wolf.x + wolfHalfWidth);
         const dy = (player.y) - (wolf.y + wolfHalfHeight);
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // אם המרחק קטן מסכום חצאי הרוחב שלהם (בקירוב), יש התנגשות
+        // אם המרחק קטן מסכום חצאי הרוחב שלהם (בקירוב), יש התנגשות.
+        // משתמש ב-player.radius המעודכן וב-wolfHalfWidth החדש.
         if (distance < player.radius + wolfHalfWidth) {
-            alert("נתפסת על ידי זאב!");
+            nextpage()
             location.reload();
         }
     });
@@ -162,7 +166,8 @@ function update() {
 
 // פונקציה למעבר לעמוד הבא
 function nextpage() {
-    alert("עבר דקה! כל הכבוד!");
+    alert("You were caught by a wolf!");
+    location.replace("./lose.html");
     // כאן תוכל להוסיף לוגיקה למעבר לעמוד הבא, לדוגמה:
     // window.location.href = "next_level.html";
 }
