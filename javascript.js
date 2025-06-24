@@ -33,6 +33,7 @@ function open_drawer(){
 function click_window(){
     if (has_rope) {
         alert("השתמשת בחבל כדי לברוח מהחלון! ניצחת!");
+        location.replace("transition1_code/transition1.html");
         // כאן אפשר להוסיף קוד למעבר לשלב הבא או סיום המשחק
     } else {
         alert("החלון גבוה מדי... אתה לא יכול לרדת בלי משהו שיעזור לך!");
