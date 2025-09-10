@@ -1,0 +1,20 @@
+body {
+    margin: 0; /* מונע שוליים ברירת מחדל של הדפדפן */
+    overflow: hidden; /* מונע גלילה אם התמונה גדולה מהמסך */
+    position: relative; /* מאפשר מיקום אבסולוטי לילדים */
+    background-image: url("./mdia/123456.jpg"); /* הרקע מוגדר ישירות על ה-body */
+    background-size: cover; /* מומלץ: מכסה את כל שטח ה-body */
+    background-position: center; /* ממרכז את התמונה */
+    background-repeat: no-repeat; /* מונע חזרתיות */
+}
+
+/* כללי ה-CSS עבור #background הוסרו, מכיוון שאין אלמנט כזה ב-HTML */
+
+#gameCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:brown;
+    z-index: 2;
+    background-color: transparent; /* החזר לזה */
+}

@@ -1,0 +1,29 @@
+body {
+    background-image: url("./mdia/way.png");
+}
+  #sing-img {
+       position: absolute;
+        margin-left: 600px; 
+  bottom: 80px;    
+ }
+
+#this{
+      height: 80px;
+  width: 260px;
+  margin-left: 830px; 
+  bottom: 330px;
+   z-index: 2; 
+   position: absolute;
+    opacity: 0;
+    background-color:red ;
+}
+#that{
+      height: 80px;
+  width: 260px;
+  margin-left: 830px; 
+  bottom: 210px;
+   z-index: 2; 
+   position: absolute;
+    opacity: 0;
+    background-color:red ;
+}
